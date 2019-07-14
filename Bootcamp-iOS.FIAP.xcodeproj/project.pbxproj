@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD1AB90122DAB4D900D78324 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AB90022DAB4D900D78324 /* CategoriesTableViewController.swift */; };
+		FD1AB90522DAB61000D78324 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AB90322DAB61000D78324 /* CategoryTableViewCell.swift */; };
+		FD1AB90622DAB61000D78324 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1AB90422DAB61000D78324 /* CategoryTableViewCell.xib */; };
 		FDE785D322DA1C9700E7DCFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE785D222DA1C9700E7DCFB /* AppDelegate.swift */; };
-		FDE785D522DA1C9700E7DCFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE785D422DA1C9700E7DCFB /* ViewController.swift */; };
 		FDE785D822DA1C9700E7DCFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE785D622DA1C9700E7DCFB /* Main.storyboard */; };
 		FDE785DA22DA1C9700E7DCFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE785D922DA1C9700E7DCFB /* Assets.xcassets */; };
 		FDE785DD22DA1C9700E7DCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE785DB22DA1C9700E7DCFB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD1AB90022DAB4D900D78324 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		FD1AB90322DAB61000D78324 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		FD1AB90422DAB61000D78324 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		FDE785CF22DA1C9700E7DCFB /* Bootcamp-iOS.FIAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bootcamp-iOS.FIAP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE785D222DA1C9700E7DCFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDE785D422DA1C9700E7DCFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDE785D722DA1C9700E7DCFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDE785D922DA1C9700E7DCFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDE785DC22DA1C9700E7DCFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +39,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD1AB8FD22DAB45D00D78324 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDE785D222DA1C9700E7DCFB /* AppDelegate.swift */,
+				FDE785DE22DA1C9700E7DCFB /* Info.plist */,
+				FDE785D922DA1C9700E7DCFB /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD1AB8FE22DAB4A400D78324 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FDE785DB22DA1C9700E7DCFB /* LaunchScreen.storyboard */,
+				FDE785D622DA1C9700E7DCFB /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FD1AB8FF22DAB4C100D78324 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD1AB90222DAB5EE00D78324 /* Cells */,
+				FD1AB90022DAB4D900D78324 /* CategoriesTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FD1AB90222DAB5EE00D78324 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FD1AB90322DAB61000D78324 /* CategoryTableViewCell.swift */,
+				FD1AB90422DAB61000D78324 /* CategoryTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FD1AB90722DAB91900D78324 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FD1AB90822DAB92D00D78324 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FD1AB90922DAB93700D78324 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FD1AB90922DAB93700D78324 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		FDE785C622DA1C9700E7DCFB = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +117,11 @@
 		FDE785D122DA1C9700E7DCFB /* Bootcamp-iOS.FIAP */ = {
 			isa = PBXGroup;
 			children = (
-				FDE785D222DA1C9700E7DCFB /* AppDelegate.swift */,
-				FDE785D422DA1C9700E7DCFB /* ViewController.swift */,
-				FDE785D622DA1C9700E7DCFB /* Main.storyboard */,
-				FDE785D922DA1C9700E7DCFB /* Assets.xcassets */,
-				FDE785DB22DA1C9700E7DCFB /* LaunchScreen.storyboard */,
-				FDE785DE22DA1C9700E7DCFB /* Info.plist */,
+				FD1AB8FD22DAB45D00D78324 /* Supporting Files */,
+				FD1AB8FE22DAB4A400D78324 /* Storyboards */,
+				FD1AB8FF22DAB4C100D78324 /* Controllers */,
+				FD1AB90722DAB91900D78324 /* Models */,
+				FD1AB90822DAB92D00D78324 /* Services */,
 			);
 			path = "Bootcamp-iOS.FIAP";
 			sourceTree = "<group>";
@@ -125,6 +187,7 @@
 				FDE785DD22DA1C9700E7DCFB /* LaunchScreen.storyboard in Resources */,
 				FDE785DA22DA1C9700E7DCFB /* Assets.xcassets in Resources */,
 				FDE785D822DA1C9700E7DCFB /* Main.storyboard in Resources */,
+				FD1AB90622DAB61000D78324 /* CategoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +198,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDE785D522DA1C9700E7DCFB /* ViewController.swift in Sources */,
 				FDE785D322DA1C9700E7DCFB /* AppDelegate.swift in Sources */,
+				FD1AB90122DAB4D900D78324 /* CategoriesTableViewController.swift in Sources */,
+				FD1AB90522DAB61000D78324 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Bootcamp-iOS.FIAP/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Bootcamp-iOS.FIAP/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Bootcamp-iOS.FIAP/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Bootcamp-iOS.FIAP/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
