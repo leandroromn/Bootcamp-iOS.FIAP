@@ -10,6 +10,10 @@
 		FD1AB90122DAB4D900D78324 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AB90022DAB4D900D78324 /* CategoriesTableViewController.swift */; };
 		FD1AB90522DAB61000D78324 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AB90322DAB61000D78324 /* CategoryTableViewCell.swift */; };
 		FD1AB90622DAB61000D78324 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1AB90422DAB61000D78324 /* CategoryTableViewCell.xib */; };
+		FD1AB90B22DC17D800D78324 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AB90A22DC17D800D78324 /* NetworkProvider.swift */; };
+		FD1C99C122EBF702002315BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1C99C022EBF702002315BD /* Constants.swift */; };
+		FD1C99C322EBF793002315BD /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1C99C222EBF793002315BD /* JokesViewController.swift */; };
+		FD1C99C522EBFCB8002315BD /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1C99C422EBFCB8002315BD /* Joke.swift */; };
 		FDE785D322DA1C9700E7DCFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE785D222DA1C9700E7DCFB /* AppDelegate.swift */; };
 		FDE785D822DA1C9700E7DCFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE785D622DA1C9700E7DCFB /* Main.storyboard */; };
 		FDE785DA22DA1C9700E7DCFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE785D922DA1C9700E7DCFB /* Assets.xcassets */; };
@@ -20,6 +24,10 @@
 		FD1AB90022DAB4D900D78324 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		FD1AB90322DAB61000D78324 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		FD1AB90422DAB61000D78324 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		FD1AB90A22DC17D800D78324 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		FD1C99C022EBF702002315BD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FD1C99C222EBF793002315BD /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
+		FD1C99C422EBFCB8002315BD /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		FDE785CF22DA1C9700E7DCFB /* Bootcamp-iOS.FIAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bootcamp-iOS.FIAP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE785D222DA1C9700E7DCFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDE785D722DA1C9700E7DCFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +71,7 @@
 			children = (
 				FD1AB90222DAB5EE00D78324 /* Cells */,
 				FD1AB90022DAB4D900D78324 /* CategoriesTableViewController.swift */,
+				FD1C99C222EBF793002315BD /* JokesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -79,6 +88,7 @@
 		FD1AB90722DAB91900D78324 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FD1C99C422EBFCB8002315BD /* Joke.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,8 +104,25 @@
 		FD1AB90922DAB93700D78324 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				FD1AB90A22DC17D800D78324 /* NetworkProvider.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		FD1C99BE22EBF6F0002315BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD1C99BF22EBF6FB002315BD /* Definitions */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD1C99BF22EBF6FB002315BD /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				FD1C99C022EBF702002315BD /* Constants.swift */,
+			);
+			path = Definitions;
 			sourceTree = "<group>";
 		};
 		FDE785C622DA1C9700E7DCFB = {
@@ -122,6 +149,7 @@
 				FD1AB8FF22DAB4C100D78324 /* Controllers */,
 				FD1AB90722DAB91900D78324 /* Models */,
 				FD1AB90822DAB92D00D78324 /* Services */,
+				FD1C99BE22EBF6F0002315BD /* Resources */,
 			);
 			path = "Bootcamp-iOS.FIAP";
 			sourceTree = "<group>";
@@ -198,9 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD1C99C122EBF702002315BD /* Constants.swift in Sources */,
+				FD1C99C322EBF793002315BD /* JokesViewController.swift in Sources */,
 				FDE785D322DA1C9700E7DCFB /* AppDelegate.swift in Sources */,
+				FD1AB90B22DC17D800D78324 /* NetworkProvider.swift in Sources */,
 				FD1AB90122DAB4D900D78324 /* CategoriesTableViewController.swift in Sources */,
 				FD1AB90522DAB61000D78324 /* CategoryTableViewCell.swift in Sources */,
+				FD1C99C522EBFCB8002315BD /* Joke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

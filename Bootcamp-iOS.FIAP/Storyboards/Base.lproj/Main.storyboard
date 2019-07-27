@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,6 +26,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="LZB-CL-IM5" kind="show" identifier="jokeSegue" id="7gD-y1-ppS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,6 +41,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3M1-qy-AlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="589.85507246376812" y="150"/>
+        </scene>
+        <!--Jokes View Controller-->
+        <scene sceneID="lG5-5p-GDF">
+            <objects>
+                <viewController id="LZB-CL-IM5" customClass="JokesViewController" customModule="Bootcamp_iOS_FIAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mmO-fS-ay8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb9-aX-Gtf">
+                                <rect key="frame" x="20" y="160" width="374" height="682"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nZu-2K-B6t">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fb9-aX-Gtf" firstAttribute="leading" secondItem="Utk-VC-L2w" secondAttribute="leading" constant="20" id="BE3-Ed-BAU"/>
+                            <constraint firstItem="nZu-2K-B6t" firstAttribute="centerY" secondItem="mmO-fS-ay8" secondAttribute="centerY" id="Bpv-Rd-DrO"/>
+                            <constraint firstItem="Utk-VC-L2w" firstAttribute="bottom" secondItem="Fb9-aX-Gtf" secondAttribute="bottom" constant="20" id="XuR-lx-e1W"/>
+                            <constraint firstItem="Fb9-aX-Gtf" firstAttribute="top" secondItem="Utk-VC-L2w" secondAttribute="top" constant="20" id="g5f-aM-yBK"/>
+                            <constraint firstItem="nZu-2K-B6t" firstAttribute="centerX" secondItem="mmO-fS-ay8" secondAttribute="centerX" id="hCM-b1-xbA"/>
+                            <constraint firstItem="Utk-VC-L2w" firstAttribute="trailing" secondItem="Fb9-aX-Gtf" secondAttribute="trailing" constant="20" id="jud-rl-a4E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Utk-VC-L2w"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="nZu-2K-B6t" id="Ht0-3r-xh9"/>
+                        <outlet property="jokeLabel" destination="Fb9-aX-Gtf" id="fti-M6-h1j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aoe-6n-SxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1461" y="150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="byM-lw-c68">

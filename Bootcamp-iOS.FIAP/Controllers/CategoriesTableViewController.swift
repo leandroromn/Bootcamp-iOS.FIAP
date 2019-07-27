@@ -10,28 +10,45 @@ import UIKit
 
 class CategoriesTableViewController: UITableViewController {
 
-    let categories = ["animal", "dev", "food", "money"]
+    var categories = [String]()
+    
+    // MARK: - View Cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupTableView()
+        requestCategories()
     }
     
+    // MARK: - Setup Views
+    
     fileprivate func setupView() {
-        title = "Categories"
+        title = Constants.tableViewTitle
     }
     
     fileprivate func setupTableView() {
+        tableView.tableFooterView = UIView()
         tableView.register(
             UINib(nibName: String(describing: CategoryTableViewCell.self), bundle: nil),
             forCellReuseIdentifier: CategoryTableViewCell.identifier
         )
     }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    
+    fileprivate func requestCategories() {
+        NetworkProvider.shared.request(Constants.categoriesUrl) { [weak self] (result: Result<[String], NetworkError>) in
+            if case .success(let categories) = result {
+                self?.categories = categories
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            }
+        }
     }
+    
+    // MARK: - Table View Delegate and Data Source
+
+    override func numberOfSections(in tableView: UITableView) -> Int { return 1 }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
@@ -47,7 +64,21 @@ class CategoriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Constants.jokeSegueIdentifier, sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let destination = segue.destination as? JokesViewController,
+            let selectedRow = tableView.indexPathForSelectedRow?.row
+        else { return }
+        
+        let category = categories[selectedRow]
+        
+        destination.category = category
     }
     
 }
