@@ -17,3 +17,6 @@ Para iniciar o projeto, basta executar o *build & run* no Xcode.
 - Swift 5.0.1
 - macOS 10.14.5
 - iOS 12.3.1
+
+### Prévia do app
+![](https://media.giphy.com/media/UTB45tfDZY4gf4tTLh/giphy.gif)
