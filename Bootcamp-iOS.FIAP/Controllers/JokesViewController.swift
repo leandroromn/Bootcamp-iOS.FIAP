@@ -33,20 +33,22 @@ class JokesViewController: UIViewController {
         let jokeUrl = Constants.jokesUrl + categoryName
         NetworkProvider.shared.request(jokeUrl) { [weak self] (response: Result<Joke, NetworkError>) in
             if case .success(let joke) = response {
-                self?.setupView(joke)
+                DispatchQueue.main.async {
+                    self?.setupView(joke)
+                }
             }
             
             if case .failure(let error) = response {
-                self?.displayAlert(Constants.titleErrorLabel, message: error.localizedDescription)
+                DispatchQueue.main.async {
+                    self?.displayAlert(Constants.titleErrorLabel, message: error.localizedDescription)
+                }
             }
         }
     }
     
     fileprivate func setupView(_ joke: Joke) {
-        DispatchQueue.main.async { [weak self] in
-            self?.activityIndicator.stopAnimating()
-            self?.jokeLabel.text = joke.message
-        }
+        activityIndicator.stopAnimating()
+        jokeLabel.text = joke.message
     }
 
 }

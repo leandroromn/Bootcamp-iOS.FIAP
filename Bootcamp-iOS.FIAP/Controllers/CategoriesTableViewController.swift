@@ -45,7 +45,9 @@ class CategoriesTableViewController: UITableViewController {
             }
             
             if case .failure(let error) = response {
-                self?.displayAlert(Constants.titleErrorLabel, message: error.localizedDescription)
+                DispatchQueue.main.async {
+                    self?.displayAlert(Constants.titleErrorLabel, message: error.localizedDescription)
+                }
             }
         }
     }

@@ -45,6 +45,7 @@ struct NetworkProvider {
                 } catch {
                     completionHandler(.failure(NetworkError.mappingError))
                 }
+                return
             }
             
             completionHandler(.failure(self.parseErrorFor(statusCode)))
