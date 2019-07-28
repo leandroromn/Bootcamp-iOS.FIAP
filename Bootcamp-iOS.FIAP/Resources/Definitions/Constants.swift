@@ -16,4 +16,7 @@ struct Constants {
     static let tableViewTitle = "Categories"
     static let jokeSegueIdentifier = "jokeSegue"
     
+    static let titleErrorLabel = "An error occurred!"
+    static let closeButtonLabel = "Close"
+    
 }

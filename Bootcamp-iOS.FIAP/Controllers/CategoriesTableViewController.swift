@@ -36,12 +36,16 @@ class CategoriesTableViewController: UITableViewController {
     }
     
     fileprivate func requestCategories() {
-        NetworkProvider.shared.request(Constants.categoriesUrl) { [weak self] (result: Result<[String], NetworkError>) in
-            if case .success(let categories) = result {
+        NetworkProvider.shared.request(Constants.categoriesUrl) { [weak self] (response: Result<[String], NetworkError>) in
+            if case .success(let categories) = response {
                 self?.categories = categories
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
+            }
+            
+            if case .failure(let error) = response {
+                self?.displayAlert(Constants.titleErrorLabel, message: error.localizedDescription)
             }
         }
     }

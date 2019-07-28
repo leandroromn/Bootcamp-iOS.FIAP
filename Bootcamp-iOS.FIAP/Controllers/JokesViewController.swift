@@ -35,6 +35,10 @@ class JokesViewController: UIViewController {
             if case .success(let joke) = response {
                 self?.setupView(joke)
             }
+            
+            if case .failure(let error) = response {
+                self?.displayAlert(Constants.titleErrorLabel, message: error.localizedDescription)
+            }
         }
     }
     

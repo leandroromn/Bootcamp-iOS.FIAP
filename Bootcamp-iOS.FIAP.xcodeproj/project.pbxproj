@@ -18,6 +18,7 @@
 		FDE785D822DA1C9700E7DCFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE785D622DA1C9700E7DCFB /* Main.storyboard */; };
 		FDE785DA22DA1C9700E7DCFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE785D922DA1C9700E7DCFB /* Assets.xcassets */; };
 		FDE785DD22DA1C9700E7DCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE785DB22DA1C9700E7DCFB /* LaunchScreen.storyboard */; };
+		FDF5CE8D22ED1E2500724692 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5CE8C22ED1E2500724692 /* UIViewController+Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FDE785D922DA1C9700E7DCFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDE785DC22DA1C9700E7DCFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDE785DE22DA1C9700E7DCFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDF5CE8C22ED1E2500724692 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		FD1C99BE22EBF6F0002315BD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FDF5CE8B22ED1E1400724692 /* Extensions */,
 				FD1C99BF22EBF6FB002315BD /* Definitions */,
 			);
 			path = Resources;
@@ -152,6 +155,14 @@
 				FD1C99BE22EBF6F0002315BD /* Resources */,
 			);
 			path = "Bootcamp-iOS.FIAP";
+			sourceTree = "<group>";
+		};
+		FDF5CE8B22ED1E1400724692 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDF5CE8C22ED1E2500724692 /* UIViewController+Alerts.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				FD1C99C122EBF702002315BD /* Constants.swift in Sources */,
 				FD1C99C322EBF793002315BD /* JokesViewController.swift in Sources */,
 				FDE785D322DA1C9700E7DCFB /* AppDelegate.swift in Sources */,
+				FDF5CE8D22ED1E2500724692 /* UIViewController+Alerts.swift in Sources */,
 				FD1AB90B22DC17D800D78324 /* NetworkProvider.swift in Sources */,
 				FD1AB90122DAB4D900D78324 /* CategoriesTableViewController.swift in Sources */,
 				FD1AB90522DAB61000D78324 /* CategoryTableViewCell.swift in Sources */,
